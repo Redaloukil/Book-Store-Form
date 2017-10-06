@@ -6,9 +6,9 @@ class Booklib extends Component {
         //state contains all books and selected books by checking
         this.state={
             books : [
-                { name: 'Zero to One', author: 'Peter Thiel' },
-                { name: 'Monk who sold his Ferrari', author: 'Robin Sharma' },
-                { name: 'Wings of Fire', author: 'A.P.J. Abdul Kalam' }
+                { number:1,name: 'Zero to One', author: 'Peter Thiel' },
+                { number:2,name: 'Monk who sold his Ferrari', author: 'Robin Sharma' },
+                { number:3,name: 'Wings of Fire', author: 'A.P.J. Abdul Kalam' }
             ],
             selectedBooks :[],
             error : false,
@@ -60,7 +60,7 @@ class Booklib extends Component {
         return(
             <div className="checkbox">
                 <label>
-                    <input type="checkbox" onChange={this.handleSelectedBooks} value={book.name}/>{book.name} -- {book.author}
+                    <input type="checkbox" onChange={this.handleSelectedBooks} key={book.number} value={book.name}/>{book.name} -- {book.author}
                 </label>
             </div>
         );

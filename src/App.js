@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Booklib from './bookstore';
-import Shippingdetails from './shipdetails'; 
-import Deliverydetails from './deldetails';
+import Booklib from './components/bookstore';
+import Shippingdetails from './components/shipdetails'; 
+import Deliverydetails from './components/deldetails';
+import Confirmation from './components/confirmation';
 
 class App extends Component {
   constructor(props){
@@ -34,8 +35,12 @@ class App extends Component {
         case 2 :
           return <Shippingdetails previousForm={this.returnPage} updateFormData={this.updateFormData}/>;
         case 3 :
-          return <Deliverydetails previousForm={this.returnPage} updateFormData={this.updateFormData}/>
-      }
+          return <Deliverydetails previousForm={this.returnPage} updateFormData={this.updateFormData}/>;
+        case 4 :
+          return <Confirmation previousForm={this.returnPage} data={this.state.formValues} updateFormData={this.updateFormData}/>;
+        default : 
+          return <Booklib />;
+        }
     }
    render () {
       return (

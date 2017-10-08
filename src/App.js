@@ -37,7 +37,7 @@ class App extends Component {
         case 3 :
           return <Deliverydetails previousForm={this.returnPage} updateFormData={this.updateFormData}/>;
         case 4 :
-          return <Confirmation previousForm={this.returnPage} data={this.state.formValues} updateFormData={this.updateFormData}/>;
+          return <Confirmation previousForm={this.returnPage} data={this.state.formValues}/>;
         default : 
           return <Booklib />;
         }

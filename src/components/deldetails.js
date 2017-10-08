@@ -7,6 +7,7 @@ class Deliverydetails extends Component {
             deliveryOption:"Primary"
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
     handleChange(event) {
         
@@ -18,7 +19,7 @@ class Deliverydetails extends Component {
     }
     handleSubmit(event) {
         event.preventDefault();
-        this.props.updateFormData(this.state);
+        this.props.updateFormData(this.state.deliveryOption);
         }
     render(){
         return(

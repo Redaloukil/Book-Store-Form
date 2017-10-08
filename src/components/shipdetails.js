@@ -55,7 +55,7 @@ class Shippingdetails extends Component {
                 <h1>Enter your information.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatum, voluptatem nulla inventore veritatis deserunt minus doloribus laudantium sit, natus, provident illum non vel! Labore ab eligendi amet voluptatibus neque?</p>
                 {this.renderError()}
-                <form>
+                <form onSubmit={(e)=>{e.preventDefault()}}>
                     <div className="form-group">
                         <input className="form-control"
                         type="text"

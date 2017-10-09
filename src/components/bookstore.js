@@ -19,6 +19,7 @@ class Booklib extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderError = this.renderError.bind(this);
     }
+    //render error if it exists 
     renderError(){
         if (this.state.error !== false){
             return(
